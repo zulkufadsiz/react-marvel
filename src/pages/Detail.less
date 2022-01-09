@@ -1,0 +1,155 @@
+@video-background: rgba(0,0,0,0.6);
+@header-background: #fff;
+@marvel-red:#ec1d24;
+h1 {
+  font-size: 3rem;
+  font-family: Roboto;
+  color: #000;
+  font-weight: 700 !important;
+}
+.text-container {
+  padding:16px 24px;
+}
+
+.marvel-header {
+  position: fixed;
+  top:0;
+  background: @header-background !important;
+  z-index: 2;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  height: auto !important;
+  .marvel-header__logo {
+    max-width:150px;
+    height:auto;
+    margin: 10px 0;
+  }
+}
+
+.marvel-intro {
+  width:100% !important;
+  margin:60px 0;
+  position: relative;
+  .marvel-intro__overlay {
+    position: absolute;
+    height:100%;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 1;
+    background: @video-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 140px;
+      color: @marvel-red;
+      line-height: 100px;
+      text-align: center;
+      font-family: Roboto;
+      font-weight: 900;
+      span {
+        display: block;
+        color:#fff;
+        font-size: 85px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.character-content {
+  .ant-row {
+    width:100%;
+  }
+}
+
+@import "~antd/lib/style/index";
+
+.container {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  margin: auto;
+}
+
+.img-fluid {
+  object-fit: contain;
+  max-width: 100%;
+}
+.hFNRBf {
+  position: relative;
+}
+.sc-jRQBWg:first-child{
+  left:0;
+}
+.sc-jRQBWg:last-child{
+  right:0;
+}
+.exctIC {
+  position: absolute;
+  top:50%;
+  background-color: red;
+  opacity: 0.6;
+  color:white;
+  padding:10px;
+  font-size:20px;
+  z-index: 11;
+}
+.section-title {
+  font-size: 3rem;
+  font-family: Roboto;
+  color: #000;
+  font-weight: 700 !important;
+  position: relative;
+  &:after {
+    content:'';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: red;
+    left:0;
+    bottom:0;
+  }
+}
+
+.secondary-title {
+  font-size: 3rem;
+  font-family: Roboto;
+  color: #000;
+  font-weight: 700 !important;
+  position: relative;
+  text-align: center;
+  &:after {
+    content:'';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: red;
+    left:calc(50% - 40px);
+    bottom:0;
+  }
+}
+p{
+  color: #767373;
+  font-size: 22px;
+
+}
+.make-container(@minWidth, @breakpoint) {
+  @media (min-width: @minWidth) {
+    .container {
+      max-width: @breakpoint;
+    }
+  }
+}
+
+.make-container(@screen-xs-min, @screen-xs);
+.make-container(@screen-sm-min, @screen-sm);
+.make-container(@screen-md-min, @screen-md);
+.make-container(@screen-lg-min, @screen-lg);
+.make-container(@screen-xl-min, @screen-xl);
+.make-container(@screen-xxl-min, @screen-xxl);
